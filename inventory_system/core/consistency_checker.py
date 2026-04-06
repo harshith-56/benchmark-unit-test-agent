@@ -1,6 +1,4 @@
 from models.order import OrderStatus
-
-
 class ConsistencyChecker:
     def __init__(self, inventory_service, order_service):
         self._inventory = inventory_service
