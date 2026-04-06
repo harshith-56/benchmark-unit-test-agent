@@ -1,0 +1,591 @@
+{
+  "inventory_system/core/consistency_checker.py::ConsistencyChecker.get_reservation_summary": {
+    "function_name": "ConsistencyChecker.get_reservation_summary",
+    "language": "python",
+    "source_file": "inventory_system/core/consistency_checker.py",
+    "target_file": "test_ai_generated_inventory_system_core_consistency_checker.py",
+    "test_id": "ConsistencyChecker_get_reservation_summary",
+    "test_names": [
+      "test_get_reservation_summary_with_available_stock_method_raises",
+      "test_get_reservation_summary_with_large_stock_and_reserved",
+      "test_get_reservation_summary_with_negative_stock_and_reserved",
+      "test_get_reservation_summary_with_no_products",
+      "test_get_reservation_summary_with_non_integer_stock_and_reserved",
+      "test_get_reservation_summary_with_normal_values",
+      "test_get_reservation_summary_with_zero_total_stock"
+    ]
+  },
+  "inventory_system/core/consistency_checker.py::ConsistencyChecker.validate_inventory_state": {
+    "function_name": "ConsistencyChecker.validate_inventory_state",
+    "language": "python",
+    "source_file": "inventory_system/core/consistency_checker.py",
+    "target_file": "test_ai_generated_inventory_system_core_consistency_checker.py",
+    "test_id": "ConsistencyChecker_validate_inventory_state",
+    "test_names": [
+      "test_validate_inventory_state_duplicate_product_ids",
+      "test_validate_inventory_state_empty_product_id_and_zero_values",
+      "test_validate_inventory_state_high_stock_warning",
+      "test_validate_inventory_state_multiple_issues",
+      "test_validate_inventory_state_negative_stock_and_reserved",
+      "test_validate_inventory_state_no_products",
+      "test_validate_inventory_state_non_string_product_id",
+      "test_validate_inventory_state_product_id_none",
+      "test_validate_inventory_state_stock_less_or_equal_reserved"
+    ]
+  },
+  "inventory_system/core/consistency_checker.py::ConsistencyChecker.validate_order_reservations": {
+    "function_name": "ConsistencyChecker.validate_order_reservations",
+    "language": "python",
+    "source_file": "inventory_system/core/consistency_checker.py",
+    "target_file": "test_ai_generated_inventory_system_core_consistency_checker.py",
+    "test_id": "ConsistencyChecker_validate_order_reservations",
+    "test_names": [
+      "test_validate_order_reservations_all_match",
+      "test_validate_order_reservations_mismatch_detected",
+      "test_validate_order_reservations_multiple_orders_accumulate_quantities",
+      "test_validate_order_reservations_no_confirmed_orders",
+      "test_validate_order_reservations_order_with_none_items",
+      "test_validate_order_reservations_order_with_zero_quantity_items",
+      "test_validate_order_reservations_product_with_no_reservations_but_reserved_stock",
+      "test_validate_order_reservations_product_with_none_product_id",
+      "test_validate_order_reservations_product_with_none_reserved_value"
+    ]
+  },
+  "inventory_system/core/reservation_manager.py::ReservationManager.release_stock": {
+    "function_name": "ReservationManager.release_stock",
+    "language": "python",
+    "source_file": "inventory_system/core/reservation_manager.py",
+    "target_file": "test_ai_generated_inventory_system_core_reservation_manager.py",
+    "test_id": "ReservationManager_release_stock",
+    "test_names": [
+      "test_release_stock_called_multiple_times_accumulates_correctly",
+      "test_release_stock_negative_quantity_raises_value_error",
+      "test_release_stock_non_integer_quantity_raises_type_error",
+      "test_release_stock_none_quantity_raises_type_error",
+      "test_release_stock_product_reserved_zero_no_change",
+      "test_release_stock_release_exact_reserved_releases_all",
+      "test_release_stock_release_more_than_reserved_releases_all",
+      "test_release_stock_valid_partial_release",
+      "test_release_stock_zero_quantity_raises_value_error"
+    ]
+  },
+  "inventory_system/core/reservation_manager.py::ReservationManager.reserve_stock": {
+    "function_name": "ReservationManager.reserve_stock",
+    "language": "python",
+    "source_file": "inventory_system/core/reservation_manager.py",
+    "target_file": "test_ai_generated_inventory_system_core_reservation_manager.py",
+    "test_id": "ReservationManager_reserve_stock",
+    "test_names": [
+      "test_reserve_stock_exact_available_stock_reserves_successfully",
+      "test_reserve_stock_insufficient_stock_raises_insufficient_stock_error",
+      "test_reserve_stock_large_quantity_raises_insufficient_stock_error",
+      "test_reserve_stock_negative_quantity_raises_value_error",
+      "test_reserve_stock_non_integer_quantity_raises_type_error",
+      "test_reserve_stock_none_quantity_raises_type_error",
+      "test_reserve_stock_valid_reservation_increases_reserved",
+      "test_reserve_stock_zero_quantity_raises_value_error"
+    ]
+  },
+  "inventory_system/core/reservation_manager.py::ReservationManager.transfer_reservation": {
+    "function_name": "ReservationManager.transfer_reservation",
+    "language": "python",
+    "source_file": "inventory_system/core/reservation_manager.py",
+    "target_file": "test_ai_generated_inventory_system_core_reservation_manager.py",
+    "test_id": "ReservationManager_transfer_reservation",
+    "test_names": [
+      "test_transfer_reservation_insufficient_available_stock_raises",
+      "test_transfer_reservation_insufficient_reserved_raises",
+      "test_transfer_reservation_negative_from_and_to_quantity_raises",
+      "test_transfer_reservation_negative_to_quantity_decreases_reservation",
+      "test_transfer_reservation_success_decrease_reservation",
+      "test_transfer_reservation_success_increase_reservation",
+      "test_transfer_reservation_success_no_change",
+      "test_transfer_reservation_zero_from_quantity_raises"
+    ]
+  },
+  "inventory_system/main.py::build_system": {
+    "function_name": "build_system",
+    "language": "python",
+    "source_file": "inventory_system/main.py",
+    "target_file": "test_ai_generated_inventory_system_main.py",
+    "test_id": "build_system",
+    "test_names": [
+      "test_build_system_components_interlinked_consistently",
+      "test_build_system_consistency_checker_has_inventory_and_orders",
+      "test_build_system_inventory_and_reservation_linked",
+      "test_build_system_multiple_calls_return_distinct_instances",
+      "test_build_system_no_arguments_and_returns_tuple_of_length_five",
+      "test_build_system_orders_has_correct_dependencies",
+      "test_build_system_pricing_has_inventory_reference",
+      "test_build_system_raises_no_exception_on_call",
+      "test_build_system_returns_all_components_of_correct_type"
+    ]
+  },
+  "inventory_system/main.py::run_demo": {
+    "function_name": "run_demo",
+    "language": "python",
+    "source_file": "inventory_system/main.py",
+    "target_file": "test_ai_generated_inventory_system_main.py",
+    "test_id": "run_demo",
+    "test_names": [
+      "test_run_demo_consistency_checker_returns_errors_and_warnings",
+      "test_run_demo_discount_raises_exception",
+      "test_run_demo_empty_product_catalog",
+      "test_run_demo_low_stock_empty_list",
+      "test_run_demo_normal_flow",
+      "test_run_demo_order_create_returns_none",
+      "test_run_demo_process_order_raises",
+      "test_run_demo_reservation_methods_return_none"
+    ]
+  },
+  "inventory_system/main.py::seed_catalog": {
+    "function_name": "seed_catalog",
+    "language": "python",
+    "source_file": "inventory_system/main.py",
+    "target_file": "test_ai_generated_inventory_system_main.py",
+    "test_id": "seed_catalog",
+    "test_names": [
+      "test_seed_catalog_calls_add_product_and_update_stock_correctly",
+      "test_seed_catalog_raises_when_add_product_raises",
+      "test_seed_catalog_raises_when_update_stock_raises",
+      "test_seed_catalog_with_inventory_methods_called_with_empty_strings_and_zero_price",
+      "test_seed_catalog_with_inventory_methods_called_with_wrong_types",
+      "test_seed_catalog_with_inventory_methods_raising_type_error",
+      "test_seed_catalog_with_inventory_methods_raising_value_error",
+      "test_seed_catalog_with_inventory_methods_returning_none",
+      "test_seed_catalog_with_inventory_methods_returning_unexpected_values"
+    ]
+  },
+  "inventory_system/models/order.py::Order.__init__": {
+    "function_name": "Order.__init__",
+    "language": "python",
+    "source_file": "inventory_system/models/order.py",
+    "target_file": "test_ai_generated_inventory_system_models_order.py",
+    "test_id": "Order___init",
+    "test_names": [
+      "test_order_init_with_empty_items_list",
+      "test_order_init_with_items_containing_none_raises_attribute_error",
+      "test_order_init_with_none_order_id_raises_type_error",
+      "test_order_init_with_none_user_id_raises_type_error",
+      "test_order_init_with_valid_inputs",
+      "test_order_repr_returns_expected_string",
+      "test_order_to_dict_calls_to_dict_on_all_items",
+      "test_order_to_dict_with_items_to_dict_raising_exception_propagates"
+    ]
+  },
+  "inventory_system/models/order.py::Order.__repr__": {
+    "function_name": "Order.__repr__",
+    "language": "python",
+    "source_file": "inventory_system/models/order.py",
+    "target_file": "test_ai_generated_inventory_system_models_order.py",
+    "test_id": "Order___repr",
+    "test_names": [
+      "test_order_repr_with_different_status",
+      "test_order_repr_with_empty_strings_and_zero_total",
+      "test_order_repr_with_large_total_value",
+      "test_order_repr_with_negative_total",
+      "test_order_repr_with_non_string_order_id_and_user_id",
+      "test_order_repr_with_none_order_id_and_user_id",
+      "test_order_repr_with_normal_values",
+      "test_order_repr_with_status_value_edge_case"
+    ]
+  },
+  "inventory_system/models/order.py::Order.to_dict": {
+    "function_name": "Order.to_dict",
+    "language": "python",
+    "source_file": "inventory_system/models/order.py",
+    "target_file": "test_ai_generated_inventory_system_models_order.py",
+    "test_id": "Order_to_dict",
+    "test_names": [
+      "test_repr_returns_expected_string_format",
+      "test_to_dict_with_empty_items_list_returns_empty_items_array",
+      "test_to_dict_with_item_to_dict_raising_exception_propagates",
+      "test_to_dict_with_multiple_items_all_to_dict_called",
+      "test_to_dict_with_negative_total_and_discount",
+      "test_to_dict_with_none_items_raises_attribute_error",
+      "test_to_dict_with_single_item_called_to_dict_once",
+      "test_to_dict_with_status_default_value_is_pending",
+      "test_to_dict_with_zero_total_and_discount"
+    ]
+  },
+  "inventory_system/models/product.py::Product.__init__": {
+    "function_name": "Product.__init__",
+    "language": "python",
+    "source_file": "inventory_system/models/product.py",
+    "target_file": "test_ai_generated_inventory_system_models_product.py",
+    "test_id": "Product___init",
+    "test_names": [
+      "test_product_init_with_empty_strings",
+      "test_product_init_with_negative_price",
+      "test_product_init_with_non_numeric_price",
+      "test_product_init_with_non_string_name",
+      "test_product_init_with_non_string_product_id",
+      "test_product_init_with_none_name",
+      "test_product_init_with_none_product_id",
+      "test_product_init_with_valid_values",
+      "test_product_init_with_zero_price"
+    ]
+  },
+  "inventory_system/models/product.py::Product.__repr__": {
+    "function_name": "Product.__repr__",
+    "language": "python",
+    "source_file": "inventory_system/models/product.py",
+    "target_file": "test_ai_generated_inventory_system_models_product.py",
+    "test_id": "Product___repr",
+    "test_names": [
+      "test_repr_with_empty_string_fields",
+      "test_repr_with_float_stock_and_reserved_cast_to_int_behavior",
+      "test_repr_with_large_values",
+      "test_repr_with_negative_stock_and_reserved",
+      "test_repr_with_non_string_product_id_and_name",
+      "test_repr_with_none_as_price_raises_type_error",
+      "test_repr_with_positive_stock_and_reserved",
+      "test_repr_with_reserved_greater_than_stock",
+      "test_repr_with_zero_stock_and_reserved"
+    ]
+  },
+  "inventory_system/models/product.py::Product.to_dict": {
+    "function_name": "Product.to_dict",
+    "language": "python",
+    "source_file": "inventory_system/models/product.py",
+    "target_file": "test_ai_generated_inventory_system_models_product.py",
+    "test_id": "Product_to_dict",
+    "test_names": [
+      "test_to_dict_with_float_stock_and_reserved_cast_to_int_behavior",
+      "test_to_dict_with_negative_stock_and_reserved",
+      "test_to_dict_with_non_string_product_id_and_name",
+      "test_to_dict_with_none_values_for_stock_and_reserved",
+      "test_to_dict_with_positive_stock_and_reserved_less_than_stock",
+      "test_to_dict_with_reserved_equal_to_stock",
+      "test_to_dict_with_reserved_greater_than_stock_negative_available",
+      "test_to_dict_with_zero_price_and_empty_name",
+      "test_to_dict_with_zero_stock_and_reserved"
+    ]
+  },
+  "inventory_system/services/inventory_service.py::InventoryService.add_product": {
+    "function_name": "InventoryService.add_product",
+    "language": "python",
+    "source_file": "inventory_system/services/inventory_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_inventory_service.py",
+    "test_id": "InventoryService_add_product",
+    "test_names": [
+      "test_add_product_duplicate_id_overwrites",
+      "test_add_product_empty_name_raises",
+      "test_add_product_name_is_whitespace_only_raises",
+      "test_add_product_name_strip_called",
+      "test_add_product_negative_price_raises",
+      "test_add_product_valid",
+      "test_add_product_zero_price_and_valid_name"
+    ]
+  },
+  "inventory_system/services/inventory_service.py::InventoryService.get_product": {
+    "function_name": "InventoryService.get_product",
+    "language": "python",
+    "source_file": "inventory_system/services/inventory_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_inventory_service.py",
+    "test_id": "InventoryService_get_product",
+    "test_names": [
+      "test_get_product_raises_ProductNotFoundError_when_product_missing",
+      "test_get_product_raises_ProductNotFoundError_with_empty_string_id",
+      "test_get_product_raises_ProductNotFoundError_with_none_id",
+      "test_get_product_raises_ProductNotFoundError_with_numeric_string_id",
+      "test_get_product_returns_correct_product_among_multiple",
+      "test_get_product_returns_product_when_exists"
+    ]
+  },
+  "inventory_system/services/inventory_service.py::InventoryService.list_low_stock": {
+    "function_name": "InventoryService.list_low_stock",
+    "language": "python",
+    "source_file": "inventory_system/services/inventory_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_inventory_service.py",
+    "test_id": "InventoryService_list_low_stock",
+    "test_names": [
+      "test_list_low_stock_all_above_threshold",
+      "test_list_low_stock_empty_products",
+      "test_list_low_stock_excludes_negative_stock",
+      "test_list_low_stock_includes_zero_stock",
+      "test_list_low_stock_non_integer_threshold",
+      "test_list_low_stock_some_below_threshold",
+      "test_list_low_stock_threshold_negative",
+      "test_list_low_stock_threshold_zero"
+    ]
+  },
+  "inventory_system/services/inventory_service.py::InventoryService.remove_product": {
+    "function_name": "InventoryService.remove_product",
+    "language": "python",
+    "source_file": "inventory_system/services/inventory_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_inventory_service.py",
+    "test_id": "InventoryService_remove_product",
+    "test_names": [
+      "test_remove_product_raises_product_not_found_error_if_product_missing",
+      "test_remove_product_raises_value_error_if_reserved_gt_zero",
+      "test_remove_product_raises_value_error_if_reserved_negative",
+      "test_remove_product_raises_value_error_with_empty_product_id",
+      "test_remove_product_raises_value_error_with_none_product_id",
+      "test_remove_product_removes_only_specified_product",
+      "test_remove_product_success_removes_product"
+    ]
+  },
+  "inventory_system/services/inventory_service.py::InventoryService.update_stock": {
+    "function_name": "InventoryService.update_stock",
+    "language": "python",
+    "source_file": "inventory_system/services/inventory_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_inventory_service.py",
+    "test_id": "InventoryService_update_stock",
+    "test_names": [
+      "test_update_stock_calls_get_product_once",
+      "test_update_stock_large_quantity_sets_stock",
+      "test_update_stock_negative_quantity_raises_value_error",
+      "test_update_stock_non_integer_quantity_raises_type_error",
+      "test_update_stock_product_not_found_raises_product_not_found_error",
+      "test_update_stock_valid_quantity_sets_stock",
+      "test_update_stock_zero_quantity_sets_stock_to_zero"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.__init__": {
+    "function_name": "OrderService.__init__",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService___init",
+    "test_names": [
+      "test_cancel_order_confirmed_does_not_release_stock",
+      "test_cancel_order_invalid_status_raises",
+      "test_cancel_order_pending_releases_stock",
+      "test_complete_order_invalid_status_raises",
+      "test_complete_order_success",
+      "test_create_order_empty_items_raises_value_error",
+      "test_create_order_success",
+      "test_process_order_insufficient_stock_raises",
+      "test_process_order_reserve_stock_partial_failure_releases_reserved",
+      "test_process_order_success"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.cancel_order": {
+    "function_name": "OrderService.cancel_order",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService_cancel_order",
+    "test_names": [
+      "test_cancel_order_confirmed_does_not_release_stock_but_cancels",
+      "test_cancel_order_confirmed_with_multiple_items_cancels_without_release",
+      "test_cancel_order_invalid_status_raises_orderstateerror",
+      "test_cancel_order_nonexistent_order_raises_ordernotfounderror",
+      "test_cancel_order_pending_releases_stock_and_cancels",
+      "test_cancel_order_pending_with_empty_items_releases_nothing_and_cancels",
+      "test_cancel_order_with_empty_string_order_id_raises_ordernotfounderror",
+      "test_cancel_order_with_none_order_id_raises_ordernotfounderror"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.complete_order": {
+    "function_name": "OrderService.complete_order",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService_complete_order",
+    "test_names": [
+      "test_complete_order_raises_order_not_found_error_for_invalid_order_id",
+      "test_complete_order_raises_order_state_error_if_not_confirmed",
+      "test_complete_order_successful_stock_deduction_and_status_update",
+      "test_complete_order_with_empty_items_list_completes_without_stock_changes",
+      "test_complete_order_with_negative_quantity_reduces_stock_and_reserved_incorrectly",
+      "test_complete_order_with_non_integer_quantity_raises_type_error",
+      "test_complete_order_with_none_order_id_raises_order_not_found_error",
+      "test_complete_order_with_zero_quantity_items_does_not_change_stock_or_reserved"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.create_order": {
+    "function_name": "OrderService.create_order",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService_create_order",
+    "test_names": [
+      "test_create_order_empty_items_raises_value_error",
+      "test_create_order_inventory_get_product_raises_propagates",
+      "test_create_order_success",
+      "test_create_order_with_missing_product_id_key",
+      "test_create_order_with_missing_quantity_key",
+      "test_create_order_with_negative_quantity",
+      "test_create_order_with_non_integer_quantity",
+      "test_create_order_with_non_string_product_id",
+      "test_create_order_with_zero_quantity"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.get_order": {
+    "function_name": "OrderService.get_order",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService_get_order",
+    "test_names": [
+      "test_get_order_raises_order_not_found_error_for_empty_string_id",
+      "test_get_order_raises_order_not_found_error_for_integer_id",
+      "test_get_order_raises_order_not_found_error_for_missing_order",
+      "test_get_order_raises_order_not_found_error_for_none_id",
+      "test_get_order_raises_order_not_found_error_for_whitespace_id",
+      "test_get_order_returns_correct_order_among_multiple_orders",
+      "test_get_order_returns_order_when_exists"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.get_order_summary": {
+    "function_name": "OrderService.get_order_summary",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService_get_order_summary",
+    "test_names": [
+      "test_get_order_summary_handles_order_with_no_items_and_no_discount",
+      "test_get_order_summary_raises_order_not_found_error_for_missing_order",
+      "test_get_order_summary_raises_order_not_found_error_for_numeric_order_id",
+      "test_get_order_summary_raises_type_error_when_order_id_is_empty_string",
+      "test_get_order_summary_raises_type_error_when_order_id_is_none",
+      "test_get_order_summary_returns_correct_summary_for_completed_order_with_discount_false",
+      "test_get_order_summary_returns_correct_summary_for_valid_order",
+      "test_get_order_summary_returns_summary_for_order_with_zero_total",
+      "test_get_order_summary_returns_summary_when_discount_applied_is_none"
+    ]
+  },
+  "inventory_system/services/order_service.py::OrderService.process_order": {
+    "function_name": "OrderService.process_order",
+    "language": "python",
+    "source_file": "inventory_system/services/order_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_order_service.py",
+    "test_id": "OrderService_process_order",
+    "test_names": [
+      "test_process_order_raises_if_order_not_pending",
+      "test_process_order_raises_insufficient_stock_if_available_less_than_quantity",
+      "test_process_order_raises_order_not_found_error_for_invalid_order_id",
+      "test_process_order_releases_reserved_stock_if_reserve_stock_raises",
+      "test_process_order_success_reserves_stock_and_confirms_order",
+      "test_process_order_with_empty_items_raises_order_not_found_error",
+      "test_process_order_with_negative_quantity_item_raises_insufficient_stock",
+      "test_process_order_with_zero_quantity_item_raises_insufficient_stock"
+    ]
+  },
+  "inventory_system/services/pricing_service.py::PricingService.apply_discount": {
+    "function_name": "PricingService.apply_discount",
+    "language": "python",
+    "source_file": "inventory_system/services/pricing_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_pricing_service.py",
+    "test_id": "PricingService_apply_discount",
+    "test_names": [
+      "test_apply_discount_fixed_discount_less_than_total_applies_correctly",
+      "test_apply_discount_fixed_discount_more_than_total_caps_at_total",
+      "test_apply_discount_invalid_code_raises",
+      "test_apply_discount_order_total_below_minimum_raises",
+      "test_apply_discount_order_total_exactly_minimum_raises",
+      "test_apply_discount_order_total_just_above_minimum_applies",
+      "test_apply_discount_percentage_discount_applies_correctly",
+      "test_apply_discount_with_empty_string_discount_code_raises",
+      "test_apply_discount_with_none_discount_code_raises"
+    ]
+  },
+  "inventory_system/services/pricing_service.py::PricingService.calculate_total": {
+    "function_name": "PricingService.calculate_total",
+    "language": "python",
+    "source_file": "inventory_system/services/pricing_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_pricing_service.py",
+    "test_id": "PricingService_calculate_total",
+    "test_names": [
+      "test_calculate_total_empty_items_list",
+      "test_calculate_total_invalid_item_missing_product_id",
+      "test_calculate_total_multiple_items",
+      "test_calculate_total_multiple_items_with_zero_and_negative",
+      "test_calculate_total_negative_quantity_item",
+      "test_calculate_total_product_price_negative",
+      "test_calculate_total_product_price_zero",
+      "test_calculate_total_single_item",
+      "test_calculate_total_zero_quantity_item"
+    ]
+  },
+  "inventory_system/services/pricing_service.py::PricingService.estimate_discounted_total": {
+    "function_name": "PricingService.estimate_discounted_total",
+    "language": "python",
+    "source_file": "inventory_system/services/pricing_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_pricing_service.py",
+    "test_id": "PricingService_estimate_discounted_total",
+    "test_names": [
+      "test_estimate_discounted_total_100_percent_discount_returns_zero",
+      "test_estimate_discounted_total_fixed_discount_applied",
+      "test_estimate_discounted_total_fixed_discount_exceeds_total_returns_zero",
+      "test_estimate_discounted_total_invalid_discount_code_raises",
+      "test_estimate_discounted_total_negative_fixed_discount_increases_total",
+      "test_estimate_discounted_total_percentage_discount_applied",
+      "test_estimate_discounted_total_total_below_min_order_returns_original",
+      "test_estimate_discounted_total_zero_fixed_discount_returns_same_total",
+      "test_estimate_discounted_total_zero_percentage_discount_returns_same_total"
+    ]
+  },
+  "inventory_system/services/pricing_service.py::PricingService.get_discount_info": {
+    "function_name": "PricingService.get_discount_info",
+    "language": "python",
+    "source_file": "inventory_system/services/pricing_service.py",
+    "target_file": "test_ai_generated_inventory_system_services_pricing_service.py",
+    "test_id": "PricingService_get_discount_info",
+    "test_names": [
+      "test_get_discount_info_discount_code_missing_type_key",
+      "test_get_discount_info_discount_code_with_empty_dict",
+      "test_get_discount_info_discount_code_with_negative_min_order",
+      "test_get_discount_info_discount_code_with_none_values",
+      "test_get_discount_info_discount_code_with_string_value",
+      "test_get_discount_info_discount_code_with_zero_percentage_value",
+      "test_get_discount_info_invalid_code_raises",
+      "test_get_discount_info_valid_fixed_discount",
+      "test_get_discount_info_valid_percentage_discount"
+    ]
+  },
+  "inventory_system/utils/helpers.py::batch_lookup": {
+    "function_name": "batch_lookup",
+    "language": "python",
+    "source_file": "inventory_system/utils/helpers.py",
+    "target_file": "test_ai_generated_inventory_system_utils_helpers.py",
+    "test_id": "batch_lookup",
+    "test_names": [
+      "test_batch_lookup_all_ids_found",
+      "test_batch_lookup_empty_product_ids",
+      "test_batch_lookup_empty_product_map",
+      "test_batch_lookup_product_ids_with_duplicates",
+      "test_batch_lookup_product_ids_with_non_string_types",
+      "test_batch_lookup_product_ids_with_none_and_empty_string",
+      "test_batch_lookup_product_map_keys_return_non_list_iterable",
+      "test_batch_lookup_product_map_raises_keyerror_on_access",
+      "test_batch_lookup_some_ids_not_found"
+    ]
+  },
+  "inventory_system/utils/helpers.py::compute_order_weight": {
+    "function_name": "compute_order_weight",
+    "language": "python",
+    "source_file": "inventory_system/utils/helpers.py",
+    "target_file": "test_ai_generated_inventory_system_utils_helpers.py",
+    "test_id": "compute_order_weight",
+    "test_names": [
+      "test_compute_order_weight_empty_list",
+      "test_compute_order_weight_item_missing_quantity_attribute",
+      "test_compute_order_weight_item_quantity_none",
+      "test_compute_order_weight_items_quantity_non_numeric",
+      "test_compute_order_weight_items_with_mixed_types_quantity",
+      "test_compute_order_weight_items_with_negative_quantity",
+      "test_compute_order_weight_items_with_zero_quantity",
+      "test_compute_order_weight_multiple_items_positive_quantities",
+      "test_compute_order_weight_single_item_positive_quantity"
+    ]
+  },
+  "inventory_system/utils/helpers.py::validate_quantity": {
+    "function_name": "validate_quantity",
+    "language": "python",
+    "source_file": "inventory_system/utils/helpers.py",
+    "target_file": "test_ai_generated_inventory_system_utils_helpers.py",
+    "test_id": "validate_quantity",
+    "test_names": [
+      "test_validate_quantity_with_boolean_raises_type_error",
+      "test_validate_quantity_with_float_raises_type_error",
+      "test_validate_quantity_with_negative_integer_raises_value_error",
+      "test_validate_quantity_with_none_raises_type_error",
+      "test_validate_quantity_with_string_raises_type_error",
+      "test_validate_quantity_with_valid_positive_integer",
+      "test_validate_quantity_with_zero"
+    ]
+  }
+}
