@@ -1,11 +1,11 @@
-from models.order import Order, OrderItem, OrderStatus
-from utils.exceptions import (
+from inventory_system.models.order import Order, OrderItem, OrderStatus
+from inventory_system.utils.exceptions import (
     OrderNotFoundError,
     OrderStateError,
     InsufficientStockError,
     ProductNotFoundError,
 )
-from utils.helpers import generate_id, get_timestamp
+from inventory_system.utils.helpers import generate_id, get_timestamp
 
 
 class OrderService:

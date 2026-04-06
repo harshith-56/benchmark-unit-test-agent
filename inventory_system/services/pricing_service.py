@@ -1,5 +1,5 @@
-from utils.exceptions import InvalidDiscountError, ProductNotFoundError
-from utils.helpers import format_currency
+from inventory_system.utils.exceptions import InvalidDiscountError, ProductNotFoundError
+from inventory_system.utils.helpers import format_currency
 
 
 DISCOUNT_CODES = {

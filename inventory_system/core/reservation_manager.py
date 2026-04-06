@@ -1,4 +1,4 @@
-from utils.exceptions import InsufficientStockError, ProductNotFoundError
+from inventory_system.utils.exceptions import InsufficientStockError, ProductNotFoundError
 
 
 class ReservationManager:

@@ -1,8 +1,8 @@
-from services.inventory_service import InventoryService
-from services.order_service import OrderService
-from services.pricing_service import PricingService
-from core.reservation_manager import ReservationManager
-from core.consistency_checker import ConsistencyChecker
+from inventory_system.services.inventory_service import InventoryService
+from inventory_system.services.order_service import OrderService
+from inventory_system.services.pricing_service import PricingService
+from inventory_system.core.reservation_manager import ReservationManager
+from inventory_system.core.consistency_checker import ConsistencyChecker
 
 
 def build_system():

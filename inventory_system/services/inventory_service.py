@@ -1,6 +1,6 @@
-from models.product import Product
-from utils.exceptions import ProductNotFoundError
-from utils.helpers import format_currency
+from inventory_system.models.product import Product
+from inventory_system.utils.exceptions import ProductNotFoundError
+from inventory_system.utils.helpers import format_currency
 
 
 class InventoryService:
